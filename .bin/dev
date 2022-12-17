@@ -1,0 +1,3 @@
+tmux new -d -n "main" -s dev
+tmux new-window -n "${EDITOR}"
+tmux a

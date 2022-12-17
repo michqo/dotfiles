@@ -1,0 +1,13 @@
+#!/usr/bin/fish
+
+# Script to update and store the date of update
+
+set path ~/Documents/update.txt
+set update_command "p" # p is an alias for paru
+
+set file $(cat $path)
+echo "Last update was on $file"
+
+set date $(date +"%d/%m/%Y %H:%M")
+echo $date > $path
+$update_command -Syyu

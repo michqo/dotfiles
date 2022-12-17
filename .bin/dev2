@@ -1,0 +1,4 @@
+tmux new -d -n "main" -s dev2
+tmux split-window -v -p 12
+tmux split-window -h -p 50
+tmux a
