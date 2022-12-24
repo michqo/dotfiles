@@ -6,7 +6,7 @@
 
 ## Installation
 
-Clone the repo
+Clone the repo in home dir `~/`
 ```
 git clone https://github.com/MichalUSER/dotfiles.git
 ```
