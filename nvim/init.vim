@@ -24,6 +24,8 @@ nnoremap H <cmd>tabprevious<CR>
 nnoremap L <cmd>tabnext<CR>
 nnoremap <leader>c <cmd>bd<CR>
 nnoremap <leader>q <cmd>qa<CR>
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 let g:cursorhold_updatetime = 100
 set mouse=
@@ -38,9 +40,9 @@ set clipboard=unnamedplus
 set ts=4 sw=4
 setlocal foldmethod=indent
 set nofoldenable
-set scrolloff=8
 " Disable automatic new line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+set scrolloff=8
 " Disable displaying of filename
 
 " Netrw
