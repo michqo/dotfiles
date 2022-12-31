@@ -11,7 +11,7 @@ Clone the repo in home dir `~/`
 git clone https://github.com/MichalUSER/dotfiles.git
 ```
 
-Run the install script - creates symlinks in `.config`
+Run the install script - creates symlinks in `.config`, `.bin`
 ```bash
 cd dotfiles
 ./install.sh
