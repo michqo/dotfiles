@@ -47,7 +47,7 @@ set -gx PNPM_HOME "/home/michal/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 
 # Env
-set -gx EDITOR nv
+set -gx EDITOR nvim
 set -gx CC clang
 set -gx LIBVA_DRIVER_NAME vdpau
 set -gx VDPAU_DRIVER nvidia
