@@ -11,21 +11,18 @@ alias grub-update 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias sr 'source ~/.config/fish/config.fish'
 alias watchgpu 'gpustat --watch -i 1'
 alias brightness 'ddcutil --display 1 setvcp 10 '
+# TODO
 alias night 'xgamma -rgamma 1 -ggamma 0.5 -bgamma 0.5'
 alias day 'xgamma -gamma 1'
 
 # User abbreviations
 abbr ytmp3 'yt-dlp --extract-audio --audio-format mp3'
-#abbr update 'p -Syyu'
 
 # ~/.local/bin
 set -x PATH $HOME/.local/bin $PATH
 
 # ~/.bin
 set -x PATH $HOME/.bin $PATH
-
-# spicetify
-set -x PATH $HOME/.spicetify $PATH
 
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
