@@ -1,0 +1,3 @@
+#!/bin/sh
+
+awk '{printf("%dD %dH %dM up",($1/60/60/24),($1/60/60%24),($1/60%60))}' /proc/uptime
