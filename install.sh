@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Delete
-rm ~/.config/fish
-rm ~/.config/nvim
-rm ~/.config/lvim
-rm ~/.tmux.conf
-rm ~/.bin
+rm -rf ~/.config/fish
+rm -rf ~/.config/nvim
+rm -rf ~/.config/lvim
+rm -rf ~/.tmux.conf
+rm -rf ~/.bin
 
 # Create links
 ln -sf ~/dotfiles/.config/fish/ ~/.config/fish
