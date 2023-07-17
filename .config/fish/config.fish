@@ -25,30 +25,18 @@ set -x PATH $HOME/.local/bin $PATH
 # ~/.bin
 set -x PATH $HOME/.bin $PATH
 
+set -x GIT_ASKPASS /usr/bin/ksshaskpass
+
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
-
-# deno
-set DENO_INSTALL "$HOME/.deno"
-set -x PATH $DENO_INSTALL/bin $PATH
-
-# bun
-set -Ux BUN_INSTALL "/home/michal/.bun"
-fish_add_path "/home/michal/.bun/bin"
 
 # flyctl
 set FLYCTL_INSTALL /home/michal/.fly
 set -x PATH $FLYCTL_INSTALL/bin $PATH
 
-# pnpm
-set -gx PNPM_HOME "/home/michal/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
-
 # Env
 set -gx EDITOR nvim
 set -gx CC clang
-set -gx LIBVA_DRIVER_NAME vdpau
-set -gx VDPAU_DRIVER nvidia
 
 # Set locales
 set -gx LC_ALL en_US.UTF-8  
@@ -57,7 +45,6 @@ set -gx LC_ALL en_US.UTF-8
 set fish_greeting
 
 zoxide init fish | source
-pyenv init - | source
 
 # Prompt
 function fish_prompt
