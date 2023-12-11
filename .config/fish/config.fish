@@ -1,5 +1,5 @@
 # Aliases
-alias ll 'exa -l -g --long'
+alias ll 'eza -lag'
 alias l='ls -lh'
 alias py 'python'
 alias pn 'pnpm'
@@ -16,13 +16,9 @@ alias brightness 'ddcutil --display 1 setvcp 10 '
 # User abbreviations
 abbr ytmp3 'yt-dlp --extract-audio --audio-format mp3'
 
-# ~/.local/bin
+# bin
 set -x PATH $HOME/.local/bin $PATH
-
-# ~/.bin
 set -x PATH $HOME/.bin $PATH
-
-set -x GIT_ASKPASS /usr/bin/ksshaskpass
 
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
