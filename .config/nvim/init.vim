@@ -1,4 +1,3 @@
-lua require('plugins')
 lua require('init')
 
 " My mappings
@@ -47,18 +46,6 @@ set scrolloff=8
 
 " Netrw
 let g:netrw_banner = 0
-
-" Lightline
-let g:lightline = {
-\	'colorscheme': 'tokyonight',
-\	'active': {
-\		'left':[ [ 'mode' ], [ 'readonly', 'filename', 'modified' ] ],
-\		'right':[ ['lineinfo'], ['percent'] ]
-\	},
-\ 	'tabline': {
-\ 	  'right': []
-\ 	},
-\}
 
 " set
 let g:toggleterm_terminal_mapping = '<C-t>'

@@ -1,7 +1,24 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = " "
+
+require("lazy").setup("plugins")
+
 -- nvim-tree
 require("nvim-tree").setup({
-  view = {
-    hide_root_folder = true
+  renderer = {
+    root_folder_label = false
   },
   filters = {
     custom = {"^.git$"},
@@ -39,11 +56,11 @@ npairs.setup({
 })
 
 -- nvim-comment
-require("nvim_comment").setup({
+--[[require("nvim_comment").setup({
   hook = function()
     require("ts_context_commentstring.internal").update_commentstring()
   end,
-})
+})--]]
 
 -- treesitter
 require'nvim-treesitter.configs'.setup {
@@ -63,11 +80,11 @@ require'nvim-treesitter.configs'.setup {
   },
   autotag = {
     enable = true,
-  },
-  context_commentstring = {
+  }
+  --[[context_commentstring = {
     enable = true,
     enable_autocmd = false,
-  }
+  }--]]
 }
 
 -- telescope

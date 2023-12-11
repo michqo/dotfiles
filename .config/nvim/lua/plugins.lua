@@ -1,25 +1,42 @@
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-
-  use {
-    'folke/tokyonight.nvim', branch = 'main'
-  }
-
-  use 'itchyny/lightline.vim'
-  use 'windwp/nvim-autopairs'
-
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'windwp/nvim-ts-autotag'
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'terrortylor/nvim-comment'
-
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {'nvim-lua/plenary.nvim'}
-  }
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
-  use 'antoinemadec/FixCursorHold.nvim'
-  use 'akinsho/toggleterm.nvim'
-end)
+return {
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    }
+  },
+  {
+    "itchyny/lightline.vim",
+    lazy = false,
+    config = function()
+      vim.g.lightline = {
+        colorscheme = "tokyonight",
+        active = {
+          left = {{'mode'}, {'readonly', 'filename', 'modified'}},
+          right = {{'lineinfo'}, {'percent'}}
+        },
+        tabline = {
+          right = {}
+        }
+      }
+    end
+  },
+  "windwp/nvim-autopairs",
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  "windwp/nvim-ts-autotag",
+  "JoosepAlviste/nvim-ts-context-commentstring",
+  "terrortylor/nvim-comment",
+  "antoinemadec/FixCursorHold.nvim",
+  "akinsho/toggleterm.nvim",
+}
