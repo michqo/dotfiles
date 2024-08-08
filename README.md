@@ -8,7 +8,7 @@
 
 Clone the repo in home dir `~/`
 ```
-git clone https://github.com/MichalUSER/dotfiles.git
+git clone https://github.com/michqo/dotfiles.git
 ```
 
 Run the install script - creates symlinks in `.config`, `.bin`
