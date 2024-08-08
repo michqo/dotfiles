@@ -31,6 +31,10 @@ set -x PATH $FLYCTL_INSTALL/bin $PATH
 set -gx EDITOR nvim
 set -gx CC gcc
 
+# Pyenv
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
 # Set locales
 set -gx LC_ALL en_US.UTF-8  
 
@@ -38,6 +42,8 @@ set -gx LC_ALL en_US.UTF-8
 set fish_greeting
 
 zoxide init fish | source
+
+pyenv init - | source
 
 # Prompt
 function fish_prompt
