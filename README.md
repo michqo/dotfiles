@@ -2,7 +2,7 @@
 
 ## About
 
-**My config files that I use on arch linux, feel free to use and customize them to your liking.**
+**Dotfiles developed for use primarily on arch linux.**
 
 ## Installation
 
@@ -12,6 +12,9 @@ git clone https://github.com/MichalUSER/dotfiles.git
 ```
 
 Run the install script - creates symlinks in `.config`, `.bin`
+
+>> WARNING: Deletes folders in 
+
 ```bash
 cd dotfiles
 ./install.sh
