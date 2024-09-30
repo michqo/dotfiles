@@ -10,4 +10,4 @@ echo "Last update was on $file"
 
 set date $(date +"%d/%m/%Y %H:%M")
 echo $date > $path
-$update_command -Syyu
+$update_command -Syyu --noconfirm --skipreview
