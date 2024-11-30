@@ -1,2 +1,1 @@
-tmux new -d -n "main" -s main
-tmux a
+tmux new -s main -n main
