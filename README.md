@@ -13,7 +13,7 @@ git clone https://github.com/michqo/dotfiles.git
 
 Run the install script - creates symlinks in `.config`, `.bin`
 
-> **WARNING**: Erases dotfiles folders.
+> **WARNING**: Install script erases dotfiles folders.
 
 ```bash
 cd dotfiles
